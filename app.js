@@ -30,8 +30,8 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-app.get('/:pairing/:id?', routes.pairing);
-app.get('/:id?', routes.index);
+app.get('/pairing/:id?', routes.pairing);
+app.get('/', routes.index);
 app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){

@@ -44,11 +44,7 @@ exports.index = function(req, res){
 
 exports.pairing = function(req, res){
   var id = req.params.id;
-  console.log( "Pairing ID:", id );
-  res.render('index', { 
-	title: 'Pairing | Success', 
-	url: "",
-	imageTag: "", 
-	imageURL: ""
+  res.render('pairing', { 
+	title: 'Pairing | Success'
   });	
 }
