@@ -1,13 +1,18 @@
 {
-  "name": "pairing",
-  "version": "0.0.1",
+  "name": "pairthetv",
+  "subdomain": "pairthetv",
+  "version": "0.0.1-1",
   "private": true,
   "scripts": {
     "start": "app"
   },
   "dependencies": {
     "express": "3.0.x",
-	"mersenne": "0.0.3",
+    "mersenne": "0.0.3",
+    "socket.io": "0.9.x",
     "jade": "0.27.x"
+  },
+  "engines": {
+    "node": "0.8.x"
   }
 }

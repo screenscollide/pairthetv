@@ -1,0 +1,15 @@
+extends layout
+
+block javascripts
+  script(charset="utf-8")
+    $(document).ready(function(){
+      $.getScript("/js/com.chrisaiv.Remote.js");
+    });
+
+block content
+  h2 Pairing Required
+  p Please scan this QR code to begin pairing devices.
+  !{imageTag}
+  br
+  p Or visit 
+  a(href="#{url}"): !{url}
