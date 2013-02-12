@@ -31,10 +31,13 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
+app.post('/vcard',       routes.vcard);
+app.get('/vcard',        routes.form);
 app.get('/pairing/:id?', routes.pairing);
-app.get('/small', routes.small);
-app.get('/', routes.index);
-app.get('/users', user.list);
+app.get('/small',        routes.small);
+app.get('/',             routes.index);
+app.get('/users',        user.list);
+
 
 var server = http.createServer(app);
 server.listen( app.get('port'), function(){

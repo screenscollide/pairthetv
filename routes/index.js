@@ -6,12 +6,13 @@
 var QRCode  = require('../lib/qrcode')
 ,  randGen = require('mersenne')
 
-function createQR( data ){	
-	var qr = QRCode.qrcode(4, 'L'); 
+function createQR( data ){
+	var size = 6
+	var qr = QRCode.qrcode(size, 'L'); 
 	qr.addData(data);
 	qr.make(); 
 
-	var img = qr.createImgTag(4);
+	var img = qr.createImgTag(size);
 	return img
 }
 
@@ -59,5 +60,20 @@ exports.pairing = function(req, res){
 exports.small = function(req, res){
 	res.render('small', { 
 		title: 'ScreensCollide.com | Pair the TV' 
+	});
+};
+
+exports.vcard = function(req, res){
+	var vcard = "BEGIN:VCARD\r\n" + "FN:" + req.body.fn + " " + req.body.ln + "\r\n" + "N:" + req.body.ln + ";" + req.body.fn + ";;;\r\n" + "EMAIL:" + req.body.email + "\r\n" + "TEL;TYPE=CELL:" + req.body.mobile + "\r\n" + "URL:" + req.body.url + "\r\n" + "END:VCARD\r\n";
+    var src   = createQR( vcard );
+	res.render('qrvcard', { 
+		title: 'ScreensCollide.com | Show QR vCard',
+		src: src
+	});
+};
+
+exports.form = function(req, res){	
+	res.render('qrform', { 
+		title: 'ScreensCollide.com | Create QR vCard'
 	});
 };

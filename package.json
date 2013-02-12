@@ -8,8 +8,8 @@
   },
   "dependencies": {
     "express": "3.0.x",
-    "mersenne": "0.0.3",
     "socket.io": "0.9.x",
+    "mersenne": "0.0.3",
     "jade": "0.27.x"
   },
   "engines": {
