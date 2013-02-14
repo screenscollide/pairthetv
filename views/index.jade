@@ -1,15 +1,22 @@
 extends layout
 
+block stylesheets
+  style
+    .red{ color: red; }
+
 block javascripts
+  //QR Code
+  script(charset="utf-8", src='/js/plugins/qrcode/jquery.qrcode.min.js')  
+  //Deep linking
+  script(charset="utf-8", src='/js/plugins/address/jquery.address-1.5.min.js')  
+  //Page Specific
   script(charset="utf-8")
     $(document).ready(function(){
-      //$.getScript("/js/global.js");
+      //Deep linking
+      $.address.value("!{path}");  
+      $.getScript("/js/pairing.js");
     });
 
 block content
-  h2 Pairing Required
-  p Please scan this QR code to begin pairing devices.
-  !{imageTag}
-  br
-  p Or visit 
-  a(href="#{url}"): !{url}
+  h2.red Pairing Required
+  #qrcode

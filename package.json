@@ -1,10 +1,10 @@
 {
   "name": "pairthetv",
   "subdomain": "pairthetv",
-  "version": "0.0.1-1",
+  "version": "0.0.1-7",
   "private": true,
   "scripts": {
-    "start": "app"
+    "start": "app.js"
   },
   "dependencies": {
     "express": "3.0.x",
