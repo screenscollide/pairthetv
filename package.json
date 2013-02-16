@@ -1,7 +1,10 @@
 {
   "name": "pairthetv",
   "subdomain": "pairthetv",
-  "version": "0.0.1-7",
+  "domains": [
+    "pairthetv.screenscollide.com"
+  ],
+  "version": "0.0.1-8",
   "private": true,
   "scripts": {
     "start": "app.js"
