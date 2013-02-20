@@ -4,7 +4,6 @@
  */
 var express = require('express')
   , routes = require('./routes')
-  , user = require('./routes/user')
   , http = require('http')
   , path = require('path');
 
@@ -32,11 +31,14 @@ app.configure('development', function(){
 });
 
 app.post('/vcard',       routes.vcard);
-app.get('/vcard',        routes.form);
+app.get('/vcard',        routes.form_vcard);
+
+app.post('/simple',      routes.simple);
+app.get('/simple',       routes.form_simple);
+
 app.get('/pairing/:id?', routes.pairing);
 app.get('/small',        routes.small);
 app.get('/',             routes.index);
-app.get('/users',        user.list);
 
 
 var server = http.createServer(app);
@@ -46,3 +48,4 @@ server.listen( app.get('port'), function(){
 
 var socket = require( process.cwd() + "/lib/Socket.js" );
     socket.init( server );
+

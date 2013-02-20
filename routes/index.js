@@ -80,14 +80,33 @@ exports.vcard = function(req, res){
 				"URL:" + req.body.url + "\r\n" + "END:VCARD\r\n";
 
     var src   = createQR( vcard );
-	res.render('qrvcard', { 
+	res.render('qr', { 
 		title: 'ScreensCollide.com | Show QR vCard',
 		src: src
 	});
 };
 
-exports.form = function(req, res){	
-	res.render('qrform', { 
+exports.form_vcard = function(req, res){	
+	res.render('form_vcard', { 
+		title: 'ScreensCollide.com | Create QR vCard'
+	});
+};
+
+/*
+* QR Code
+*/
+
+exports.simple = function( req, res ){
+	var string = req.body.string
+	var src   = createQR( string );
+	res.render('qr', { 
+		title: 'ScreensCollide.com | Simple ',
+		src: src
+	});
+}
+
+exports.form_simple = function(req, res){	
+	res.render('form_simple', { 
 		title: 'ScreensCollide.com | Create QR vCard'
 	});
 };
