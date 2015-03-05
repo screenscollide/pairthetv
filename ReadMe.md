@@ -33,4 +33,4 @@ MIT
 *Free Software, Fuck Yeah!*
 
 [@screenscollide] http://twitter.com/screenscollide
-[@chrisaiv] http://twitter.com/chrisaiv
+[@chrismendezinla] http://twitter.com/chrismendezinla
