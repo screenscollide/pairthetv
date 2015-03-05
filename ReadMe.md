@@ -1,16 +1,16 @@
-Pair the TV
+[http://cuethetv.screenscollide.com/](http://cuethetv.screenscollide.com/)
 =========
 
-Pair the TV allows users to pair screens for interaction
+Pair the TV allows users to pair screens for interaction.
 
-Version
+
+####Author
 -
+- Chris Mendez | [@chrismendezinla](http://twitter.com/chrismendezinla)
 
-1.0
 
-Tech
------------
-
+####Tech
+-
 Overview of available Javascript based QRCode projects:
 
 * https://github.com/bcelenza/node-qr
@@ -21,14 +21,11 @@ Overview of available Javascript based QRCode projects:
 * http://code.google.com/p/bwip-js/
 * https://github.com/jeromeetienne/jquery-qrcode
 
-Installation
---------------
 
-
-License
+####License
 -
 
-MIT
+####MIT
 
 *Free Software, Fuck Yeah!*
 
