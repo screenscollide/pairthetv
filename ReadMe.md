@@ -28,6 +28,3 @@ Overview of available Javascript based QRCode projects:
 ####MIT
 
 *Free Software, Fuck Yeah!*
-
-[@screenscollide] http://twitter.com/screenscollide
-[@chrismendezinla] http://twitter.com/chrismendezinla
